@@ -19,7 +19,7 @@ jobs:
         dotnet-version: '10.0.202'
 
     - name: Publish API
-      run:
+      run: |
         iisreset /stop
         
         $deployPath = "${{ vars.API_PUBLISH_PATH }}"
