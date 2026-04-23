@@ -18,7 +18,7 @@ jobs:
         dotnet-version: '10.0.202'
 
     - name: Publish Migrator
-      run: dotnet publish ./src/Hosts/l7TeamVN.Migrator/l7TeamVN.Migrator.csproj -c Release -o C:\Deployments\Migrator
+      run: dotnet publish ./src/Host/l7TeamVN.SaaS.Migrator/l7TeamVN.SaaS.Migrator.csproj -c Release -o C:\Deployments\Migrator\SaaS
 
     - name: Update Config
       uses: microsoft/variable-substitution@v1
