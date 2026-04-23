@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\l7TeamVN.SaaS.Modules.Identity.API\l7TeamVN.SaaS.Modules.Identity.API.csproj" />
+    <ProjectReference Include="..\l7TeamVN.SaaS.Modules.Identity.Infrastructure\l7TeamVN.SaaS.Modules.Identity.Infrastructure.csproj" />
+    <ProjectReference Include="..\l7TeamVN.SaaS.Modules.Identity.Persistence\l7TeamVN.SaaS.Modules.Identity.Persistence.csproj" />
+  </ItemGroup>
+
+</Project>

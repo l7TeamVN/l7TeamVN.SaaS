@@ -1,0 +1,26 @@
+<Solution>
+  <Folder Name="/BuildingBlocks/">
+    <Project Path="BuildingBlocks/l7TeamVN.SaaS.Persistence.SqlServer/l7TeamVN.SaaS.Persistence.SqlServer.csproj" Id="0561a4cf-866c-45b8-9bf7-07fdc02f87b8" />
+    <Project Path="BuildingBlocks/l7TeamVN.SaaS.Presentation/l7TeamVN.SaaS.Presentation.csproj" Id="c796c29f-4205-46f8-8f2d-191a56c14a6f" />
+    <Project Path="D:/[l7TeamVN]/l7TeamVN.SaaS/src/BuildingBlocks/l7TeamVN.SaaS.Application/l7TeamVN.SaaS.Application.csproj" Id="10776d67-b1f2-4f9b-9cd8-2839558cb9bc" />
+    <Project Path="D:/[l7TeamVN]/l7TeamVN.SaaS/src/BuildingBlocks/l7TeamVN.SaaS.Domain/l7TeamVN.SaaS.Domain.csproj" Id="901b303c-8aa3-4b3a-a065-0e56e5fbd107" />
+    <Project Path="D:/[l7TeamVN]/l7TeamVN.SaaS/src/BuildingBlocks/l7TeamVN.SaaS.Infrastructure/l7TeamVN.SaaS.Infrastructure.csproj" Id="bfd5c528-dd3e-44ad-a75b-d8fc327e1c25" />
+    <Project Path="D:/[l7TeamVN]/l7TeamVN.SaaS/src/BuildingBlocks/l7TeamVN.SaaS.Persistence/l7TeamVN.SaaS.Persistence.csproj" Id="bcdd7474-84ac-457a-8b3e-b75ba1db64fd" />
+  </Folder>
+  <Folder Name="/Host/">
+    <Project Path="D:/[l7TeamVN]/l7TeamVN.SaaS/src/Host/l7TeamVN.SaaS.API/l7TeamVN.SaaS.API.csproj" Id="7ac0cec7-5d95-476d-9b13-4889fd8797cf" />
+    <Project Path="Host/l7TeamVN.SaaS.Migrator/l7TeamVN.SaaS.Migrator.csproj" Id="49f92983-c322-4b5e-84c3-712c6dbcc1c2" />
+  </Folder>
+  <Folder Name="/Modules/" />
+  <Folder Name="/Modules/Identity/">
+    <Project Path="Modules/Identity/l7TeamVN.SaaS.Modules.Identity.API/l7TeamVN.SaaS.Modules.Identity.API.csproj" Id="74c5c379-64f9-45d7-ac11-7ad9c6ea1541" />
+    <Project Path="Modules/Identity/l7TeamVN.SaaS.Modules.Identity.Application/l7TeamVN.SaaS.Modules.Identity.Application.csproj" Id="57e9a3dc-d965-4bac-af2c-eaf1eeff0ad0" />
+    <Project Path="Modules/Identity/l7TeamVN.SaaS.Modules.Identity.Domain/l7TeamVN.SaaS.Modules.Identity.Domain.csproj" Id="37df6416-e08e-494b-97f3-1601e441b20e" />
+    <Project Path="Modules/Identity/l7TeamVN.SaaS.Modules.Identity.Infrastructure/l7TeamVN.SaaS.Modules.Identity.Infrastructure.csproj" Id="484cb50f-2bcd-4f34-bf5e-39f121968fed" />
+    <Project Path="Modules/Identity/l7TeamVN.SaaS.Modules.Identity.Persistence/l7TeamVN.SaaS.Modules.Identity.Persistence.csproj" Id="0d22fefb-7045-4f63-a8ca-4b7cf00e8a5d" />
+    <Project Path="Modules/Identity/l7TeamVN.SaaS.Modules.Identity/l7TeamVN.SaaS.Modules.Identity.csproj" Id="67c1a27b-eb6e-4dfd-a319-a8796975d619" />
+  </Folder>
+  <Folder Name="/Shared/">
+    <Project Path="D:/[l7TeamVN]/l7TeamVN.SaaS/src/Shared/l7TeamVN.SaaS.SharedKernel/l7TeamVN.SaaS.SharedKernel.csproj" Id="b03e8fde-af9a-4bb6-8993-97f70857cbe2" />
+  </Folder>
+</Solution>

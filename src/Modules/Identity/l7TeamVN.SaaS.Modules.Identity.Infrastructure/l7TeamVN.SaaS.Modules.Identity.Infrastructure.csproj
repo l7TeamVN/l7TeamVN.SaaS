@@ -1,0 +1,14 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\..\BuildingBlocks\l7TeamVN.SaaS.Infrastructure\l7TeamVN.SaaS.Infrastructure.csproj" />
+    <ProjectReference Include="..\l7TeamVN.SaaS.Modules.Identity.Application\l7TeamVN.SaaS.Modules.Identity.Application.csproj" />
+  </ItemGroup>
+
+</Project>

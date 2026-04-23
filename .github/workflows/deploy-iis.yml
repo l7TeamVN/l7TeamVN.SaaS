@@ -1,0 +1,40 @@
+name: Deploy ASP.NET API
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build-and-deploy:
+
+    runs-on: self-hosted
+    
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: '10.0.202'
+
+    - name: Publish API
+      run:
+        iisreset /stop
+        
+        $deployPath = "${{ vars.API_PUBLISH_PATH }}"
+        if (!(Test-Path -Path $deployPath)) { New-Item -ItemType Directory -Path $deployPath }
+         dotnet publish ./src/Hosts/l7TeamVN.WebAPI/l7TeamVN.WebAPI.csproj -c Release -o $deployPath
+
+    - name: Update Config
+      uses: microsoft/variable-substitution@v1
+      with:
+        files: '${{ vars.API_PUBLISH_PATH }}/appsettings.json'
+      env:
+        Modules.Identity.ConnectionStrings.Default: ${{ secrets.PROD_CONNECTION_STRING }}
+
+    - name: Restart IIS
+      shell: powershell
+      run: |
+
+        iisreset /start

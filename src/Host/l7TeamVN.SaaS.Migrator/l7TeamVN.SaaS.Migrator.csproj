@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-l7TeamVN.SaaS.Migrator-c1dedacc-51cc-41fa-95fa-1701dea7123a</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="10.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="10.0.7">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.6" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\BuildingBlocks\l7TeamVN.SaaS.Infrastructure\l7TeamVN.SaaS.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\BuildingBlocks\l7TeamVN.SaaS.Persistence\l7TeamVN.SaaS.Persistence.csproj" />
+    <ProjectReference Include="..\..\Modules\Identity\l7TeamVN.SaaS.Modules.Identity\l7TeamVN.SaaS.Modules.Identity.csproj" />
+  </ItemGroup>
+</Project>
