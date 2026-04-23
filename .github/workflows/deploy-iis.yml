@@ -24,7 +24,7 @@ jobs:
         
         $deployPath = "${{ vars.API_PUBLISH_PATH }}"
         if (!(Test-Path -Path $deployPath)) { New-Item -ItemType Directory -Path $deployPath }
-         dotnet publish ./src/Hosts/l7TeamVN.SaaS.API/l7TeamVN.SaaS.API.csproj -c Release -o $deployPath
+         dotnet publish ./src/Host/l7TeamVN.SaaS.API/l7TeamVN.SaaS.API.csproj -c Release -o $deployPath
 
     - name: Update Config
       uses: microsoft/variable-substitution@v1
