@@ -1,7 +1,7 @@
 ﻿using l7TeamVN.SaaS.Domain.Events;
 using l7TeamVN.SaaS.Modules.Identity.Domain.Events;
 
-namespace l7TeamVN.SaaS.Modules.Identity.Application.Authentication.Register;
+namespace l7TeamVN.SaaS.Modules.Identity.Application.EventHandlers;
 
 public class UserCreatedEventHandler : IDomainEventHandler<UserCreatedEvent>
 {

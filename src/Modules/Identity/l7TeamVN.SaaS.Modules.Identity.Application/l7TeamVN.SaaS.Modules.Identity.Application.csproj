@@ -11,8 +11,4 @@
     <ProjectReference Include="..\l7TeamVN.SaaS.Modules.Identity.Domain\l7TeamVN.SaaS.Modules.Identity.Domain.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Dtos\" />
-  </ItemGroup>
-
 </Project>

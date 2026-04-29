@@ -53,7 +53,7 @@ public record PhoneNumber : IFormattable
 
     }
 
-    public static implicit operator string(PhoneNumber phoneNumber) => phoneNumber.Value;
+    public static implicit operator string?(PhoneNumber? phoneNumber) => phoneNumber?.Value;
 
     public override string ToString() => Value;
 

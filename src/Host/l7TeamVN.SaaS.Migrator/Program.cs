@@ -14,7 +14,7 @@ services.AddPersistenceService();
 services.AddIdentityModule(options =>
 {
     configuration.GetSection("Modules:Identity").Bind(options);
-    options.ConnectionStrings.MigrationsAssembly = Assembly.GetExecutingAssembly().GetName().Name;
+    options.ConnectionStrings!.MigrationsAssembly = Assembly.GetExecutingAssembly().GetName().Name;
 });
 
 
