@@ -32,9 +32,9 @@ jobs:
         files: '${{ vars.API_PUBLISH_PATH }}/appsettings.json'
       env:
         Modules.Identity.ConnectionStrings.Default: ${{ secrets.PROD_CONNECTION_STRING }}
+        Modules.Identity.JwtOptions.SecretKey: ${{ secrets.PROD_JWT_SECRET }}
 
     - name: Restart IIS
       shell: powershell
       run: |
-
         iisreset /start
