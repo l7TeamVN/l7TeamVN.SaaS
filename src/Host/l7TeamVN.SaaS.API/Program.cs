@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.OpenApi;
 using Serilog;
 using Serilog.Events;
 
@@ -45,7 +46,23 @@ services.AddIdentityModule(options =>
     configuration.GetSection("Modules:Identity").Bind(options);
 });
 
-services.AddSwaggerGen();
+services.AddSwaggerGen(setupAction =>
+{
+    setupAction.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Type = SecuritySchemeType.Http,
+        Scheme = "Bearer",
+        BearerFormat = "JWT",
+        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\""
+    });
+
+    setupAction.AddSecurityRequirement(doc => new OpenApiSecurityRequirement
+    {
+        {
+            new OpenApiSecuritySchemeReference("Bearer", doc), new List<string>()
+        }
+    });
+});
 
 var app = builder.Build();
 

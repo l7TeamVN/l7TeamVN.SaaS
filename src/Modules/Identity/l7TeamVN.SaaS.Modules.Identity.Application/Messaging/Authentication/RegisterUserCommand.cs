@@ -7,7 +7,7 @@ using l7TeamVN.SaaS.Modules.Identity.Domain.Repositories;
 using l7TeamVN.SaaS.SharedKernel.Results;
 using l7TeamVN.SaaS.SharedKernel.ValueObjects;
 
-namespace l7TeamVN.SaaS.Modules.Identity.Application.Authentication.Register;
+namespace l7TeamVN.SaaS.Modules.Identity.Application.Messaging.Authentication;
 
 public record RegisterUserCommand : ICommand<Guid>
 {

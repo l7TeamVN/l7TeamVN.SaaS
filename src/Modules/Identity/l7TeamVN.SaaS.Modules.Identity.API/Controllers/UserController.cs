@@ -1,15 +1,17 @@
-﻿using l7TeamVN.SaaS.Modules.Identity.Application.Users;
+﻿using l7TeamVN.SaaS.Modules.Identity.Application.Messaging.Users;
 using l7TeamVN.SaaS.Presentation.API;
 using MediatR;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace l7TeamVN.SaaS.Modules.Identity.API.Controllers;
 
 [Route("api/[controller]")]
+[Authorize]
 public class UserController(ISender sender) : ApiController
 {
     [HttpGet]
-    public async Task<IActionResult> GetUsers()
+    public async Task<IActionResult> GetUsersAsync()
     {
         var result = await sender.Send(new GetUsersQuery());
 

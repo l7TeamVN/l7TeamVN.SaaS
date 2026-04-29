@@ -5,7 +5,7 @@ using l7TeamVN.SaaS.Modules.Identity.Application.Dtos;
 using l7TeamVN.SaaS.Modules.Identity.Domain.Repositories;
 using l7TeamVN.SaaS.SharedKernel.Results;
 
-namespace l7TeamVN.SaaS.Modules.Identity.Application.Users;
+namespace l7TeamVN.SaaS.Modules.Identity.Application.Messaging.Users;
 
 public record GetUsersQuery : IQuery<IEnumerable<UserDto>>
 {

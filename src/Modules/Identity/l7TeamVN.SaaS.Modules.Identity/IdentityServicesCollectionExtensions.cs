@@ -13,8 +13,8 @@ public static class IdentityServicesCollectionExtensions
 
 
         services.AddIdentityApplication();
-        services.AddIdentityInfrastructure();
-        services.AddIdentityPersistence(settings.ConnectionStrings);
+        services.AddIdentityInfrastructure(settings.JwtOptions!);
+        services.AddIdentityPersistence(settings.ConnectionStrings!);
         return services;
     }
 }
