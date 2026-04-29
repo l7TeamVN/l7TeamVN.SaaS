@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace l7TeamVN.SaaS.Presentation.API;
 
 [ApiController]
-public class ApiController(ISender sender) : ControllerBase
+public class ApiController : ControllerBase
 {
     protected IActionResult HandleFailure(Result result) =>
         result switch
@@ -23,11 +23,11 @@ public class ApiController(ISender sender) : ControllerBase
             return new ProblemDetails
             {
                 Title = "Bad Request",
-                Type = "Validation.Error",
-                Detail = "One or more validation errors occurred.",
+                Type = result.Errors[0].Code,
+                Detail = result.Errors[0].Message,
                 Status = StatusCodes.Status400BadRequest,
                 Extensions = {
-                    ["errors"] = result.Errors.Select(e => new
+                    ["errors"] = result.Errors.Skip(1).Select(e => new
                     {
                         e.Code,
                         e.Message

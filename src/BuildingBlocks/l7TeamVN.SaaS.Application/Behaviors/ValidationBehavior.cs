@@ -19,7 +19,7 @@ public class ValidationBehavior<TRequest, TResponse>(IEnumerable<IValidator<TReq
 
         var context = new ValidationContext<TRequest>(request);
 
-        var errors = _validators
+        var validationErrors = _validators
             .Select(validator => validator.Validate(context))
             .SelectMany(validationResult => validationResult.Errors)
             .Where(validationFailure => validationFailure != null)
@@ -27,9 +27,13 @@ public class ValidationBehavior<TRequest, TResponse>(IEnumerable<IValidator<TReq
                 failure.PropertyName,
                 failure.ErrorMessage))
             .Distinct()
-            .ToArray();
+            .ToList();
 
-        if (!errors.Any()) return await next();
+        if (!validationErrors.Any()) return await next();
+
+        validationErrors.Insert(0, new Error("Validation.Error","One or more validation errors occurred."));
+
+        var errors = validationErrors.ToArray();
 
         return CreateValidationResult<TResponse>(errors);
 
